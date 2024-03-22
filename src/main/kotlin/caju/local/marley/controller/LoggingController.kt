@@ -8,9 +8,17 @@ import org.springframework.web.bind.annotation.RestController
 @RestController
 @RequestMapping("logs")
 class LoggingController {
-
     private val logger = LoggerFactory.getLogger(javaClass)
 
+    @GetMapping("/all")
+    fun all(): String {
+        logger.trace("A TRACE Message")
+        logger.debug("A DEBUG Message")
+        logger.info("An INFO Message")
+        logger.warn("A WARN Message")
+        logger.error("An ERROR Message")
+        return "All kind of logs produced (debug, info, warn, error)"
+    }
     @GetMapping("/info")
     fun info(): String {
         logger.info("Info log printing")

@@ -8,7 +8,7 @@ plugins {
 }
 
 group = "caju.local"
-version = "0.0.1-SNAPSHOT"
+version = "0.0.2-SNAPSHOT"
 
 java {
 	sourceCompatibility = JavaVersion.VERSION_17
@@ -21,6 +21,8 @@ repositories {
 dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-web")
 	implementation("org.springframework.boot:spring-boot-starter-actuator")
+	implementation("ch.qos.logback.contrib:logback-json-classic:0.1.5")
+	implementation("net.logstash.logback:logstash-logback-encoder:6.6")
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")

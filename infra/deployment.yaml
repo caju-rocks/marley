@@ -1,0 +1,23 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: marley
+    environment: dev
+  name: marley
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: marley
+  template:
+    metadata:
+      labels:
+        app: marley
+        version: 0.0.1
+    spec:
+      containers:
+      - image: ghcr.io/caju-rocks/marley:0.0.1
+        imagePullPolicy: IfNotPresent
+        name: marley
