@@ -31,6 +31,12 @@ class LoggingController {
         return "Debug log produced"
     }
 
+    @GetMapping("/runner")
+    fun debug(): String {
+        logger.info("this was builded on a self-hosted github runner")
+        return "Ok"
+    }
+
     @GetMapping("/exception")
     fun exception(): String {
         try {

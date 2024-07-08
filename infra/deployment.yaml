@@ -15,9 +15,9 @@ spec:
     metadata:
       labels:
         app: marley
-        version: 0.0.2
+        version: 0.0.3-sha-9c18782
     spec:
       containers:
-      - image: ghcr.io/caju-rocks/marley:0.0.2
+      - image: ghcr.io/caju-rocks/marley:sha-9c18782
         imagePullPolicy: IfNotPresent
         name: marley
