@@ -14,4 +14,10 @@ class WaitController {
         Thread.sleep(seconds * 1000)
         return "$seconds seconds delay"
     }
+
+    @GetMapping("/tenseconds")
+    fun tenSecondDelay(): String {
+        Thread.sleep(10 * 1000)
+        return "10 seconds delay"
+    }
 }
