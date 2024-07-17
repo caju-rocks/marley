@@ -32,7 +32,7 @@ class LoggingController {
     }
 
     @GetMapping("/runner")
-    fun debug(): String {
+    fun runner(): String {
         logger.info("this was builded on a self-hosted github runner")
         return "Ok"
     }
